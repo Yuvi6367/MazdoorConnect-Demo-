@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+  }
+  
+  .dashboard-header {
+    width: 100%;
+    background-color: #8178e4;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 9px;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Card Styles with Hover and Glow Effects */
+  .card {
+    position: relative;
+    background-color: #c1e5f08a;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(20, 0, 0, 0.5);
+    color: #000000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Glowing Border Effect */
+  .card:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #4A3AFF, #FF85B3);
+    border-radius: 14px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover:before {
+    opacity: 1;
+    animation: glow 3s linear infinite;
+  }
+  
+  @keyframes glow {
+    0% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(180deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+  
+  /* Text Styling */
+  .card h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .card span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+  }
+  
+  /* Smooth Fade-in Animation */
+  .dashboard-grid {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .card i {
+  font-size: 25px;       /* Adjust icon size */
+  color: #4A3AFF;        /* Icon color */
+  margin-bottom: 10px;   /* Space between icon and title */
+  transition: color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.card:hover i {
+  color: #FF85B3;        /* Change color on hover */
+  transform: scale(1.4); /* Slightly enlarge icon on hover */
+}* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+}
+
+.dashboard-header {
+  width: 100%;
+  background-color: #4A3AFF;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.card {
+  background-color: #ccccccad;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card .icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+  display: block;
+  color: #4A3AFF;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.card span {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}

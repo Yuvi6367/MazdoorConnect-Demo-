@@ -1,0 +1,246 @@
+
+
+/* General Styles */
+body {
+    font-family: 'Ysabeau SC', sans-serif;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+:root {
+    --header-text-color: rgb(255, 255, 255);
+    --cell-text-color: #303030;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* Pop-up */
+.popup {
+    position: fixed;
+    top: 30%;
+    left: 5%;
+    width: 80%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    text-align: left;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #0056b3;
+}
+
+.category {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.separator {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+/* Month Switcher - Keep it centered */
+.month-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+.btn-switch {
+    background: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    /* Rounded edges for buttons */
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-switch:hover {
+    transform: scale(1.1);
+}
+
+.current-month {
+
+    font-size: 1em;
+}
+
+/* Share Button */
+.btn-share {
+    background: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    /* Rounded edges for the share button */
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    transition: background 0.3s ease;
+    position: absolute;
+    left: 0;
+}
+
+.btn-share:hover {
+    background: #003d80;
+}
+
+/* Spreadsheet Container */
+.spreadsheet {
+    font-weight: bold;
+    flex-grow: 1;
+    overflow-y: scroll;
+    margin-top: 20px;
+    max-height: 350px;
+    border-radius: 10px;
+    /* Rounded edges for the spreadsheet container */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.spreadsheet::-webkit-scrollbar {
+    display: none;
+}
+
+.row {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header .cell {
+    background-color: #0056b3;
+    color: var(--header-text-color);
+    /* Adjusted weight for header */
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    padding: 6px 0;
+}
+
+.cell {
+    flex: 1;
+    padding: 6px;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: var(--cell-text-color);
+}
+
+.row:nth-child(odd):not(.header) {
+    background-color: #f9f9f9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    height: 67vh;
+    position: fixed;
+}
+
+.spreadsheet {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 160px);
+    scrollbar-width: none;
+    padding-bottom: 10px;
+}
+
+.spreadsheet::-webkit-scrollbar {
+    display: none;
+}
+
+.spreadsheet::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    /* Rounded edges for scrollbar thumb */
+}
+
+.spreadsheet::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff;
+}
+
+/* Fixed Calculator Section Styling */
+.calculator {
+    background-color: #ebebeb8a;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(116, 116, 116, 0.1);
+    position: sticky;
+    bottom: 0;
+    border-radius: 10px;
+    /* Rounded edges for calculator */
+}
+
+.calculator .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.calculator .cell {
+    color: #333;
+}
+
+.separator {
+    margin: 2px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="Learning">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Learning.css">
+</head>
+<body>
+    <div class="overlay" onclick="dismissPopup()"></div>
+    
+    <div class="popup">
+        
+        <div class="header">
+            <div class="title">Labour</div>
+            <div class="category">Category Name</div>
+            <hr class="separator">
+        </div>
+        
+     
+    
+        <div class="month-switcher">   <!-- Share Button before Month Switcher -->
+            <button class="btn-share">
+                <i class="fas fa-share"></i></button>
+            <button class="btn-switch" onclick="switchMonth('prev')">‹</button>
+            <span class="current-month">December</span>
+            <button class="btn-switch" onclick="switchMonth('next')">›</button>
+        </div>
+    
+
+
+        <!-- Spreadsheet inside the pop-up -->
+        <div class="spreadsheet">
+            <div class="row header">
+                <div class="cell">Date</div>
+                <div class="cell">Hajri</div>
+                <div class="cell">Advance</div>
+            </div>
+
+            <div class="row">
+                <div class="cell">01</div>
+                <div class="cell">P</div>
+                <div class="cell">1000</div>
+            </div>
+            <!-- Fixed Calculator Section -->
+<div class="calculator">
+    <div class="row">
+        <div class="cell">Balance:</div>
+        <div class="cell">Rate</div>
+        <div class="cell">Advance Money</div>
+        
+    </div>
+    <hr class="separator">
+    <div class="row">
+        <div class="cell">Total:</div>
+        <div class="cell" colspan="2">XXX</div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

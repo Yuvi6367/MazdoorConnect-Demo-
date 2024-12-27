@@ -1,0 +1,280 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #325fb3;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .site-selector {
+    display: inline-flex;
+    align-items: center;
+    background-color: #325fb3;
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.header .site-selector:hover {
+    background-color: #274d94;
+    box-shadow: 0 4px 10px rgba(76, 40, 160, 0.4);
+    transform: translateY(-2px);
+}
+
+.header .site-selector::after {
+    content: '▼';
+    margin-left: 10px;
+    font-size: 12px;
+    color: #ddd;
+    transition: transform 0.3s;
+}
+
+.header .site-selector:hover::after {
+    transform: rotate(180deg);
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* The rest of the CSS remains the same */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ececec;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabs button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #325fb3;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.tabs button:hover {
+    color: #325fb3;
+    transform: translateY(-2px);
+}
+
+.date-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.date-selector div {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.date-selector div.selected {
+    color: #325fb3;
+    font-weight: bold;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #325fb3;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    transform: scale(1.2);
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.content p {
+    margin: 20px 0;
+    color: #333;
+}
+
+.add-labour-btn {
+    background-color: #325fb3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.add-labour-btn:hover {
+    background-color: #4c28a0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(76, 40, 160, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Popup Overlay */
+
+
+/* Popup Form */
+/* Popup Container */
+.popup-form {
+    background: #ffffff;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column grid */
+    grid-gap: 16px;
+}
+
+/* Full-width Fields */
+.popup-form .full-width {
+    grid-column: span 2;
+}
+
+/* Header */
+.popup-form h2 {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.popup-form input[type="text"],
+.popup-form input[type="number"],
+.popup-form input[type="date"],
+.popup-form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+/* Dropdown + Add Category Button */
+.popup-form .dropdown-button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Add Category Button */
+.plus-button {
+    width: 45px;
+    height: 45px;
+    background-color: #6200ea;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.plus-button:hover {
+    background-color: #3700b3;
+    transform: scale(1.1);
+}
+
+/* Submit Button */
+.popup-form button[type="submit"] {
+    grid-column: span 2;
+    background: linear-gradient(90deg, #6200ea, #3700b3);
+    color: #ffffff;
+    font-size: 18px;
+    padding: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.popup-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #3700b3, #6200ea);
+    transform: scale(1.03);
+}
+
+/* Close Button */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    color: #888888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.popup-close:hover {
+    color: #000000;
+}
+
+/* Field Focus */
+.popup-form input:focus,
+.popup-form select:focus {
+    border-color: #6200ea;
+    box-shadow: 0 0 8px rgba(98, 0, 234, 0.3);
+    outline: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

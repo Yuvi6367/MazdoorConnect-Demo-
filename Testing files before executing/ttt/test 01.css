@@ -1,0 +1,29 @@
+.date-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.date-selector div {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.date-selector div.selected {
+    color: #325fb3;
+    font-weight: bold;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #325fb3;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    transform: scale(1.2);
+}

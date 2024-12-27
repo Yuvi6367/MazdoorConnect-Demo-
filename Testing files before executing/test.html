@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Selector</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Site Selector -->
+    <button class="site-selector" id="open-selector">
+      <span id="selected-site">Demo Site</span>
+      <span id="arrow-icon">▼</span>
+    </button>
+
+    <!-- Sliding Popup -->
+    <div class="site-popup" id="site-popup">
+      <div class="popup-header">
+        <span>Select Site</span>
+        <button class="close-button" id="close-popup">✕</button>
+      </div>
+      <ul id="site-list">
+        <li class="site-option" data-site="Demo Site">
+          Demo Site
+          <button class="delete-site" data-site="Demo Site">Delete</button>
+        </li>
+        <li class="site-option" data-site="Test Site">
+          Test Site
+          <button class="delete-site" data-site="Test Site">Delete</button>
+        </li>
+      </ul>
+      <div class="add-site-container">
+        <input type="text" id="new-site" placeholder="Add new site" />
+        <button id="add-site-button">+ Add</button>
+      </div>
+      <button id="save-button" class="save-button">Save</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Delete Confirmation Popup -->
+    <div class="delete-popup" id="delete-popup">
+      <div class="delete-content">
+        <p>Are you sure you want to delete <strong id="site-to-delete"></strong>?</p>
+        <div class="popup-actions">
+          <button id="confirm-delete" class="confirm-button">Yes</button>
+          <button id="cancel-delete" class="cancel-button">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="test.js"></script>
+</body>
+</html>
