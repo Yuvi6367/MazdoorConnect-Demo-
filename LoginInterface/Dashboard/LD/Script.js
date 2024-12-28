@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const user = result.user;
       console.log(`Logged in as: ${user.displayName}`);
       alert(`Welcome, ${user.displayName}!`);
+  
+      // Redirect to dashboard.html after successful login
+      window.location.href = "Dashboard/dashboard.html";
     } catch (error) {
       console.error("Login failed:", error.message);
       alert("Login failed. Please try again.");
@@ -33,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
   const skipButton = document.getElementById("skip-button");
 
-  skipButton.addEventListener("click", function () {
-    window.location.href = "Dashboard/dashboard.html"; // Navigates to the dashboard page
-  });
+  // skipButton.addEventListener("click", function () {
+  //   window.location.href = "Dashboard/dashboard.html"; // Navigates to the dashboard page
+  // });
 });
 document.addEventListener("DOMContentLoaded", () => {
 
